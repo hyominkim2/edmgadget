@@ -139,18 +139,6 @@ st.markdown("""
  🛠️  **시나리오 실험**: 다양한 매개변수를 통해 맞춤형 전략 테스트 가능
 """)
 
-# 입력 폼 (사전 신청, 문의 등)
-st.markdown("### 📬 문의 또는 데모 요청")
-with st.form("inquiry_form"):
-    name = st.text_input("이름")
-    email = st.text_input("이메일")
-    organization = st.text_input("소속 기관/회사")
-    message = st.text_area("문의 내용 또는 데모 요청 사항")
-
-    submitted = st.form_submit_button("제출")
-    if submitted:
-        st.success("문의가 성공적으로 접수되었습니다. 빠르게 연락드리겠습니다!")
-
 # --- 사이드바: 사용자 입력 파라미터 ---
 with st.sidebar:
     st.header("⚙️ 시뮬레이션 설정")
@@ -217,3 +205,14 @@ if st.button("🚀 통합 최적화 시뮬레이션 실행", type="primary"):
 
     with st.expander("📄 시간별 상세 데이터 로그 보기"):
         st.dataframe(results)
+
+# 입력 폼 (사전 신청, 문의 등)
+st.markdown("### 📬 문의 또는 데모 요청")
+with st.form("inquiry_form"):
+    name = st.text_input("이름")
+    email = st.text_input("이메일")
+    organization = st.text_input("소속 기관/회사")
+    message = st.text_area("문의 내용 또는 데모 요청 사항")
+    submitted = st.form_submit_button("제출")
+    if submitted:
+        st.success("문의가 성공적으로 접수되었습니다. 빠르게 연락드리겠습니다!")
