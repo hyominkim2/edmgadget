@@ -129,6 +129,28 @@ st.markdown("""
 에이전트는 `전력 가격(SMP)`에 따라 `IT 작업 스케줄링`, `냉각 정책`,`ESS 충/방전`을 통합적으로 결정하여 총 운영 비용을 최소화합니다.
 """)
 
+
+st.markdown("## ✅ Benefits")
+st.markdown("""
+ 💰  **운영 비용 절감**: 전력 가격 변화에 따른 실시간 부하 조절  
+ 🌱  **탄소 배출 저감**: 냉각 정책과 ESS 운용 최적화를 통한 친환경 전략  
+ 🤖  **AI 기반 의사결정**: 강화학습 정책으로 상황에 따른 최적 행동 선택  
+ 📊  **가시성 확보**: ESS, PUE, 전력 가격 등 다양한 지표의 시각적 추적  
+ 🛠️  **시나리오 실험**: 다양한 매개변수를 통해 맞춤형 전략 테스트 가능
+""")
+
+# 입력 폼 (사전 신청, 문의 등)
+st.markdown("### 📬 문의 또는 데모 요청")
+with st.form("inquiry_form"):
+    name = st.text_input("이름")
+    email = st.text_input("이메일")
+    organization = st.text_input("소속 기관/회사")
+    message = st.text_area("문의 내용 또는 데모 요청 사항")
+
+    submitted = st.form_submit_button("제출")
+    if submitted:
+        st.success("문의가 성공적으로 접수되었습니다. 빠르게 연락드리겠습니다!")
+
 # --- 사이드바: 사용자 입력 파라미터 ---
 with st.sidebar:
     st.header("⚙️ 시뮬레이션 설정")
