@@ -122,6 +122,7 @@ def run_integrated_simulation(params):
     return results_df, deferred_bank
 
 
+
 # --- Streamlit UI 구성 ---
 st.title("⚡️ DC-XAI 데이터센터 통합 최적화 시뮬레이터")
 st.markdown("""
